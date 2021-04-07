@@ -1,25 +1,49 @@
-body, html {
+body,
+html {
   height: 100%;
-  font-family: 'Lato';
+  font-family: "Lato";
   color: #4a4a4a;
   font-size: 25px;
 }
 
 /* This * selects every element and adds styling */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ***** Element inside menu ***** */
-/* Links */
-a {
-  cursor: pointer;
-  font-family: 'Montserrat Alternates', sans-serif;
-  color: black;
+/* .hide {
+  display: none;
+} */
+
+.rotate {
+  transform: rotate(45deg) perspective(700px);
+  transform-origin: center center;
 }
- /* links in menu  */
+
+/* ***** Elements inside menu ***** */
+/* Links */
+.side-nav-link {
+  cursor: pointer;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+}
+
+.side-nav-link:hover {
+  color: lemonchiffon;
+  text-shadow: 3px 2px 4px white;
+  text-decoration: none;
+}
+
+.side-nav-link:active {
+  color: black;
+  text-shadow: 3px 2px 4px white;
+  text-decoration: none;
+}
+
+/* links in menu  */
 ul {
   list-style: none;
 }
@@ -77,7 +101,6 @@ ul {
   margin-bottom: -2px;
 }
 
-
 .menu_shown .menu__icon span {
   background: transparent;
 }
@@ -92,18 +115,17 @@ ul {
   transform: rotate(-45deg);
 }
 
-
 .mobile.menu {
   background-image: url("assets/ContainerBG.jpg");
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 100%;
   min-height: 100vh;
   text-align: center;
   padding-top: 112px;
   z-index: 10;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   transform: translateX(-100%);
 }
 
@@ -118,13 +140,30 @@ ul {
   line-height: 2;
   padding: 25px 0;
   font-size: xx-large;
+  cursor: pointer;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: floralwhite;
+  text-shadow: none;
 }
+
+.mobile .menu__item:hover {
+  color: lemonchiffon;
+  text-shadow: 3px 2px 4px white;
+  text-decoration: none;
+}
+
+
+/* Images Div */
+.images {
+  display: inline;
+}
+
 
 /* Main page landing with my pic  */
 .parallax {
-  background-image: url('assets/19742.jpg');
+  background-image: url("assets/19742.jpg");
   /* Full height */
-  height: 100%;   
+  height: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -132,10 +171,472 @@ ul {
   background-size: cover;
   /* overflow: hidden; */
 }
+.center-parallax {
+  height: 223px;
+}
+.about-me-div {
+  background-color: #d7a966;
+  max-width: 100%;
+  padding: 60px 105px;
+}
 
+p {
+  color: #2b2a29;
+  font-family: "Montserrat", sans-serif;
+}
 
+.center-h2-div {
+  text-align: center;
+}
 
+.my-work-h2 {
+  font-family: "Poiret One";
+  text-align: center;
+  padding-top: 73px;
+  font-weight: 700;
+  z-index: 2;
+  position: relative;
+}
+.pink-hex-pic {
+  width: 266px;
+  margin: -148px 0px 0px 0px;
+  overflow: hidden;
+  z-index: -5;
+  position: inherit;
+}
 
+/* $item-width: 90%; */
+
+.carousel {
+  padding: 20px;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: gray;
+}
+.carousel > * {
+  flex: 0 0 auto;
+}
+.carousel figure {
+  margin: 0;
+  width: 40%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.carousel figure img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 0px;
+}
+.carousel figure img:not(:first-of-type) {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.carousel nav {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0;
+}
+.carousel nav button {
+  flex: 0 0 auto;
+  margin: 0 5px;
+  cursor: pointer;
+  color: wheat;
+  background: darkslategrey;
+  border: 1px solid;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  border-radius: 25%;
+  margin: 0px 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-link-on-lg {
+    display: none;
+  }
+
+  .hello-display-on-sm {
+    font-family: 'Montserrat Alternates';
+    padding: 85px 0px 0px 67px;
+    margin: 0px 0px 0px 0px;
+    font-size: 8vw;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.title-display-on-sm {
+  font-family: 'Montserrat Alternates';
+  padding: 234px 10px 0px 70px;
+  font-size: 12vw;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+  .title-pic {
+    /* height: 200px;
+    margin: 318px 0px 0px 61px;
+    position: absolute; */
+    display: none;
+  }
+
+  .name-pic {
+    /* height: 180px;
+  margin: 93px 0px 0px 33px;
+  position: absolute; */
+    display: none;
+  }
+
+  .profile-pic {
+    /* display: none; */
+    height: 35vw;
+    position: absolute;
+    margin: 215px 0px 0px 155px;
+}
+}
+
+@media only screen and (min-width: 601px) {
+  .title-display-on-sm,
+  .hello-display-on-sm {
+    display: none;
+  }
+
+  .nav-link-on-lg {
+    display: none;
+  }
+
+  .title-pic {
+    height: 34%;
+    margin: 328px 0px 0px 48px;
+    position: absolute;
+  }
+
+  .name-pic {
+    height: 32%;
+    margin: 119px 0px 0px 59px;
+    position: absolute;
+  }
+
+  .profile-pic {
+    height: 31%;
+    margin: 229px 0px 0px 245px;
+    position: absolute;
+  }
+
+  .mobile.menu {
+    background-image: url("assets/ContainerBG.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 112px;
+    z-index: 10;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-100%);
+  }
+}
+
+@media only screen and (min-width: 655px) {
+  .menu__icon {
+    display: none;
+  }
+
+  .desktop {
+    display: inline;
+    padding-top: 45px;
+    font-size: 22px;
+  }
+
+  .side-nav {
+    background-image: url("assets/DarkBGHexagon.png");
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    height: 100%;
+    width: 44%;
+    padding-top: 8px;
+  }
+
+  .side-nav-link {
+    padding: 40px 0px 0px 18px;
+    font-weight: 600;
+    font-size: 155%;
+  }
+
+  .link-1 {
+    margin: 18px 0px 0px 10px;
+  }
+
+  .link-2 {
+    margin: 40px 0px 0px 55px;
+  }
+
+  .link-3 {
+    margin: 40px 0px 0px 42px;
+  }
+
+  .link-4 {
+    margin: 40px 0px 0px 0px;
+  }
+
+  .grow {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .grow:hover {
+    transform: scale(1.1);
+    padding-left: 50px;
+  }
+
+  a {
+    cursor: pointer;
+    font-family: "Montserrat Alternates", sans-serif;
+    color: floralwhite;
+    text-shadow: none;
+  }
+
+  .title-pic {
+    position: absolute;
+    height: 38%;
+    margin: 315px 0px 0px -59px;
+  }
+
+  .profile-pic {
+    position: absolute;
+    height: 28%;
+    margin: 224px 0px 0px 162px;
+  }
+
+  .name-pic {
+    position: absolute;
+    height: 38%;
+    margin: 70px 0px 0px -59px;
+  }
+}
+
+@media only screen and (min-width: 745px) {
+  .menu__icon {
+    display: none;
+  }
+
+  .desktop {
+    display: inline;
+    padding-top: 45px;
+    font-size: 22px;
+  }
+
+  .side-nav {
+    background-image: url("assets/DarkBGHexagon.png");
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    height: 100%;
+    width: 44%;
+    padding-top: 8px;
+  }
+
+  .side-nav-link {
+    padding: 40px 0px 0px 18px;
+    font-weight: 600;
+    font-size: 155%;
+  }
+
+  .link-1 {
+    margin: 18px 0px 0px 10px;
+  }
+
+  .link-2 {
+    margin: 40px 0px 0px 55px;
+  }
+
+  .link-3 {
+    margin: 40px 0px 0px 42px;
+  }
+
+  .link-4 {
+    margin: 40px 0px 0px 0px;
+  }
+
+  .grow {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .grow:hover {
+    transform: scale(1.1);
+    padding-left: 50px;
+  }
+
+  a {
+    cursor: pointer;
+    font-family: "Montserrat Alternates", sans-serif;
+    color: floralwhite;
+    text-shadow: none;
+  }
+
+  .title-pic {
+    position: absolute;
+    height: 38%;
+    margin: 314px 0px 0px -60px;
+  }
+
+  .profile-pic {
+    position: absolute;
+    height: 34%;
+    margin: 206px 0px 0px 160px;
+  }
+
+  .name-pic {
+    position: absolute;
+    height: 38%;
+    margin: 70px 0px 0px -61px;
+  }
+}
+
+@media only screen and (min-width: 807px) {
+  .title-pic {
+    height: 38%;
+    margin: 315px 0px 0px -61px;
+    display: inline;
+    position: absolute;
+  }
+
+  .name-pic {
+    display: inline;
+    height: 38%;
+    margin: 69px 0px 0px -61px;
+    position: absolute;
+  }
+
+  .profile-pic {
+    height: 35%;
+    margin: 204px 0px 0px 157px;
+    position: absolute;
+  }
+
+  .side-nav-link:hover {
+    color: lemonchiffon;
+    text-shadow: 3px 2px 4px white;
+    text-decoration: none;
+}
+}
+
+@media only screen and (min-width: 885px) {
+  .menu__icon {
+    display: none;
+  }
+
+  .desktop {
+    display: inline;
+    padding-top: 26px;
+    font-size: 22px;
+  }
+
+  .side-nav {
+    background-image: url("assets/DarkBGHexagon.png");
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    height: 100%;
+    width: 44%;
+  }
+
+  .side-nav-link {
+    padding: 40px 0px 0px 18px;
+    font-weight: 600;
+    font-size: 155%;
+  }
+
+  .link-1 {
+    margin: 18px 0px 0px 15px;
+  }
+
+  .link-2 {
+    margin: 40px 0px 0px 55px;
+  }
+
+  .link-3 {
+    margin: 40px 0px 0px 42px;
+  }
+
+  .link-4 {
+    margin: 40px 0px 0px 0px;
+  }
+
+  .grow {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .grow:hover {
+    transform: scale(1.1);
+    padding-left: 50px;
+  }
+
+  a {
+    cursor: pointer;
+    font-family: "Montserrat Alternates", sans-serif;
+    color: floralwhite;
+    text-shadow: none;
+  }
+
+  .title-pic {
+    height: 39%;
+    margin: 322px 0px 0px -33px;
+    display: inline;
+    position: absolute;
+  }
+
+  .name-pic {
+    display: inline;
+    height: 38%;
+    margin: 62px 0px 0px -27px;
+    position: absolute;
+  }
+
+  .profile-pic {
+    height: 38%;
+    margin: 194px 0px 0px 210px;
+    position: absolute;
+    /* display: inline-flex; */
+  }
+}
+
+/* @media only screen and (max-width: 475px) {
+  .title-pic {
+    height: 225px;
+    position: absolute;
+    display: inline-flex;
+    margin: 275px 0px 0px 15px;
+}
+
+.name-pic {
+  height: 190px;
+  position: absolute;
+  display: inline-flex;
+  margin: 70px 0px 0px 80px;
+}
+
+.profile-pic {
+  height: 150px;
+  margin: 0px 0px 0px 0px;
+  position: absolute;
+  display: inline-flex;
+}
+} */
+
+/* .profile-pic {
+  height: 150px;
+  margin: 0px 0px 0px 0px;
+  position: absolute;
+  display: inline-flex;
+} */
 
 /* @media (min-width: map-get($viewport_size, l)) {
   nav {
@@ -164,11 +665,6 @@ ul {
   color: black;
   font-size: x-large;
 
-} */
-
-
-/* @media only screen and (max-width: 600px) {
-  
 } */
 
 /* 

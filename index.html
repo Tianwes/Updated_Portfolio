@@ -11,9 +11,9 @@
     <!-- Font Awesome Icons  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-
+    <!-- Google Fonts  -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@300;400&family=Poiret+One&display=swap" rel="stylesheet">
-
+    <!-- External CSS  -->
     <link rel="stylesheet" href="style.css">
 
     <title>Document</title>
@@ -22,40 +22,74 @@
 <body>
 
     <div class="parallax landing-parallax">
-        <nav>
+        <nav class="side-nav">
             <!-- need to add media queries -->
             <ul class="menu desktop">
-                <li><a href="" class="menu__item">Tiffany Weaver</a></li>
-                <li><a href="" class="menu__item">My Work</a></li>
-                <li><a href="" class="menu__item">About Me</a></li>
-                <li><a href="" class="menu__item">Contact Me</a></li>
+                <!-- <li class="side-nav-link"><a href="" class="menu__item">Tiffany Weaver</a></li> -->
+                <li class="side-nav-link link-1 grow menu__item" id="aboutMe" style="font-size:3vw">About Me</li>
+                <li class="side-nav-link link-2 grow menu__item" id="myWork" style="font-size:3vw">My Work</li>
+                <li class="side-nav-link link-3 grow menu__item" id="mySocial" style="font-size:3vw">My Socials</li>
+                <li class="side-nav-link link-4 grow menu__item" id="contactMe" style="font-size:3vw">Contact Me</li>
             </ul>
             <a class="menu__icon mobile"><span></span></a>
             <ul class="menu mobile">
-                <li><a href="" class="menu__item">Tiffany Weaver</a></li>
-                <li><a href="" class="menu__item">My Work</a></li>
                 <li><a href="" class="menu__item">About Me</a></li>
+                <li><a href="" class="menu__item">My Work</a></li>
+                <li><a href="" class="menu__item">My Socials</a></li>
                 <li><a href="" class="menu__item">Contact Me</a></li>
             </ul>
-        </nav>
+        </nav>   
+        <div class="images">
+               <img class="img title-pic" src="assets/HexagonTitle.png" alt="job-title"/>
+         
+                <img class="img name-pic" src="assets/GoldHexagonName.png" alt="my-name"/>
+
+                <img class="img profile-pic" src="assets/NewHexagonPortfolioPic.png" alt="my-picture"/>
+
+                <h2 class="hello-display-on-sm">Hi, I'm <br> Tiffany Weaver,</h2>
+                <h2 class="title-display-on-sm">a full-stack developer.</h2>
+         </div>      
     </div>
 
-    <div class="container about-me">
-        <p class="aboutMe-p text-break">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eligendi necessitatibus, 
-            dolor veritatis magnam aspernatur cumque debitis ullam numquam doloribus ab distinctio ducimus optio aut? Dolore unde porro quia quisquam. 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio maxime quod beatae quis ratione amet illum voluptates voluptate eos excepturi! Quidem 
-        sunt quod impedit laborum soluta culpa, ipsam quibusdam quam?</p>
-
+    <!-- <div class="container about-me-div">
+        <p class="aboutMe-p text-break">Hi, my name is Tiffany Weaver. I'm a software engineer working
+            front-end and back-end. I worked for and received my certification from UCF Coding Bootcamp.  
+            I'm fluent in HTML, CSS, Bootstrap, Materialize, Javascript, Jquery, and Node.JS. Let's get 
+            creating.
+        </p>
+        https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp
     </div>
 
-    <div class="parallax bottom-parallax">
-        <h2>Contact Me:</h2>
-        <ul>
-            <li>My number</li>
-            <li>Email</li>
-            <li>GitHub</li>
-        </ul>
-    </div>
+    <div class="parallax center-parallax">
+<div class="center-h2-div">
+     <h2 class="my-work-h2">My Work</h2>
+     <img class="img pink-hex-pic" src="assets/BlankPinkHexagon.png"/>
+</div>
+</div>   -->
+
+<!-- <div class="carousel">
+	<figure>
+    <img class="carousel-img" src="assets/portfolio_img/ReadyS.E.T.T.Eat.png" alt="">
+		<img class="carousel-img" src="assets/portfolio_img/WorkPlanner.png" alt="">
+		<img class="carousel-img" src="assets/portfolio_img/cloudPortfolio.png" alt="">
+		<img class="carousel-img" src="assets/portfolio_img/ReadyS.E.T.T.Eat.png" alt="">
+		<img class="carousel-img" src="assets/portfolio_img/WorkPlanner.png" alt="">
+		<img class="carousel-img" src="assets/portfolio_img/cloudPortfolio.png" alt="">
+		<img class="carousel-img" src="assets/portfolio_img/ReadyS.E.T.T.Eat.png" alt="">
+		<img class="carousel-img" src="assets/portfolio_img/WorkPlanner.png" alt="">
+	</figure>
+	<nav>
+		<button class="nav prev">Prev</button>
+		<button class="nav next">Next</button>
+	</nav>
+    </div> -->
+
+    <div class="parallax center-parallax">
+
+        </div>
+    
+   
+
 
     <footer>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
